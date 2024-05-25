@@ -9,11 +9,14 @@ import 'package:sumary/view/chapter6/chapter6_bt2/exercises/exercise5/exercise5I
 import 'package:sumary/view/chapter6/chapter6_bt2/exercises/exercise6/exercise6Index.dart';
 import 'package:sumary/view/chapter6/chapter6_bt2/exercises/exercise7/exercise7Index.dart';
 import 'package:sumary/view/chapter6/chapter6_bt2/exercises/exercise8/exercise8Index.dart';
-class listFunction extends StatelessWidget {
-  listFunction({
+
+class ListFunction extends StatelessWidget {
+  ListFunction({
     super.key,
   });
+
   final Random _random = Random();
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -22,73 +25,29 @@ class listFunction extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(left: 5,top: 10,right: 20,bottom: 10),
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: TextButton(
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Exercise1()));
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Exercise1()));
                   },
-                  child: Container(
-                      height: 60,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(15.0),
-                          topRight: Radius.circular(15.0),
-                        ),
-                        gradient: LinearGradient(
-                          begin: Alignment.centerLeft,
-                          end: Alignment.centerRight,
-                          colors: [
-                            Colors.white,
-                            Color.fromRGBO(_random.nextInt(255), _random.nextInt(255), _random.nextInt(255), 1),
-                          ],
-                        ),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.lightGreen),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
                       ),
-                      child: Center(
-                        child: const Text(
-                            'Giải Mã Chuỗi',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 25,
-                            ),
-                        ),
-                      ),
+                    ),
                   ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 20,top: 10,right: 5,bottom: 10),
-              child: Align(
-                alignment: Alignment.centerRight,
-                child: TextButton(
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Exercise2()));
-                  },
                   child: Container(
                     height: 60,
                     width: double.infinity,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(15.0),
-                        topLeft: Radius.circular(15.0),
-                      ),
-                      gradient: LinearGradient(
-                        begin: Alignment.centerRight,
-                        end: Alignment.centerLeft,
-                        colors: [
-                          Colors.white,
-                          Color.fromRGBO(_random.nextInt(255), _random.nextInt(255), _random.nextInt(255), 1),
-                        ],
-                      ),
-                    ),
                     child: Center(
                       child: const Text(
-                        'Chia 3',
+                        'Bài 1',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 25,
                         ),
                       ),
@@ -98,35 +57,29 @@ class listFunction extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 5,top: 10,right: 20,bottom: 10),
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: TextButton(
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Exercise3()));
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Exercise2()));
                   },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.lightGreen),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                    ),
+                  ),
                   child: Container(
                     height: 60,
                     width: double.infinity,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        bottomRight: Radius.circular(15.0),
-                        topRight: Radius.circular(15.0),
-                      ),
-                      gradient: LinearGradient(
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
-                        colors: [
-                          Colors.white,
-                          Color.fromRGBO(_random.nextInt(255), _random.nextInt(255), _random.nextInt(255), 1),
-                        ],
-                      ),
-                    ),
                     child: Center(
                       child: const Text(
-                        'Số Lớn Nhì',
+                        'Bài 2',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 25,
                         ),
                       ),
@@ -136,73 +89,29 @@ class listFunction extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 20,top: 10,right: 5,bottom: 10),
-              child: Align(
-                alignment: Alignment.centerRight,
-                child: TextButton(
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Exercise4()));
-                  },
-                  child: Container(
-                    height: 60,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(15.0),
-                        topLeft: Radius.circular(15.0),
-                      ),
-                      gradient: LinearGradient(
-                        begin: Alignment.centerRight,
-                        end: Alignment.centerLeft,
-                        colors: [
-                          Colors.white,
-                          Color.fromRGBO(_random.nextInt(255), _random.nextInt(255), _random.nextInt(255), 1),
-                        ],
-                      ),
-                    ),
-                    child: Center(
-                      child: const Text(
-                        'Độ Lệch',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 25,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 5,top: 10,right: 20,bottom: 10),
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: TextButton(
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Exercise5()));
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Exercise3()));
                   },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.lightGreen),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                    ),
+                  ),
                   child: Container(
                     height: 60,
                     width: double.infinity,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        bottomRight: Radius.circular(15.0),
-                        topRight: Radius.circular(15.0),
-                      ),
-                      gradient: LinearGradient(
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
-                        colors: [
-                          Colors.white,
-                          Color.fromRGBO(_random.nextInt(255), _random.nextInt(255), _random.nextInt(255), 1),
-                        ],
-                      ),
-                    ),
                     child: Center(
                       child: const Text(
-                        'Phòng Thi',
+                        'Bài 3',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 25,
                         ),
                       ),
@@ -212,73 +121,29 @@ class listFunction extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 20,top: 10,right: 5,bottom: 10),
-              child: Align(
-                alignment: Alignment.centerRight,
-                child: TextButton(
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Exercise6()));
-                  },
-                  child: Container(
-                    height: 60,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(15.0),
-                        topLeft: Radius.circular(15.0),
-                      ),
-                      gradient: LinearGradient(
-                        begin: Alignment.centerRight,
-                        end: Alignment.centerLeft,
-                        colors: [
-                          Colors.white,
-                          Color.fromRGBO(_random.nextInt(255), _random.nextInt(255), _random.nextInt(255), 1),
-                        ],
-                      ),
-                    ),
-                    child: Center(
-                      child: const Text(
-                        'Số Xe Đẹp',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 25,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 5,top: 10,right: 20,bottom: 10),
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: TextButton(
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Exercise7()));
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Exercise4()));
                   },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.lightGreen),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                    ),
+                  ),
                   child: Container(
                     height: 60,
                     width: double.infinity,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        bottomRight: Radius.circular(15.0),
-                        topRight: Radius.circular(15.0),
-                      ),
-                      gradient: LinearGradient(
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
-                        colors: [
-                          Colors.white,
-                          Color.fromRGBO(_random.nextInt(255), _random.nextInt(255), _random.nextInt(255), 1),
-                        ],
-                      ),
-                    ),
                     child: Center(
                       child: const Text(
-                        'Cắt Giảm Số',
+                        'Bài 4',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 25,
                         ),
                       ),
@@ -288,35 +153,125 @@ class listFunction extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 20,top: 10,right: 5,bottom: 10),
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
               child: Align(
-                alignment: Alignment.centerRight,
+                alignment: Alignment.centerLeft,
                 child: TextButton(
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Exercise8()));
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Exercise5()));
                   },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.lightGreen),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                    ),
+                  ),
                   child: Container(
                     height: 60,
                     width: double.infinity,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(15.0),
-                        topLeft: Radius.circular(15.0),
-                      ),
-                      gradient: LinearGradient(
-                        begin: Alignment.centerRight,
-                        end: Alignment.centerLeft,
-                        colors: [
-                          Colors.white,
-                          Color.fromRGBO(_random.nextInt(255), _random.nextInt(255), _random.nextInt(255), 1),
-                        ],
-                      ),
-                    ),
                     child: Center(
                       child: const Text(
-                        'Tiền Điện',
+                        'Bài 5',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
+                          fontSize: 25,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Exercise6()));
+                  },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.lightGreen),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                    ),
+                  ),
+                  child: Container(
+                    height: 60,
+                    width: double.infinity,
+                    child: Center(
+                      child: const Text(
+                        'Bài 6',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Exercise7()));
+                  },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.lightGreen),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                    ),
+                  ),
+                  child: Container(
+                    height: 60,
+                    width: double.infinity,
+                    child: Center(
+                      child: const Text(
+                        'Bài 7',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Exercise8()));
+                  },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.lightGreen),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                    ),
+                  ),
+                  child: Container(
+                    height: 60,
+                    width: double.infinity,
+                    child: Center(
+                      child: const Text(
+                        'Bài 8',
+                        style: TextStyle(
+                          color: Colors.white,
                           fontSize: 25,
                         ),
                       ),
@@ -332,3 +287,23 @@ class listFunction extends StatelessWidget {
   }
 }
 
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.orange,
+        centerTitle: true,
+        title: const Text('Home Page'),
+      ),
+      body: ListFunction(),
+    );
+  }
+}

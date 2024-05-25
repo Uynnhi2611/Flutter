@@ -12,11 +12,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.orange,
         centerTitle: true,
         title: const Text('Home Page'),
       ),
-      body: listFunction(),
+      body: ListFunction(),
     );
   }
 }
